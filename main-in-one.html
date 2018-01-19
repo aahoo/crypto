@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      iframe {
+        display: block;
+        float: left;
+        padding: 1px;
+        width: 700px;
+        height: 500px;
+      } 
+      body{
+          margin: 0;
+          padding: 0;
+      }
+      body > div {
+        float: left;
+      }
+    </style>
+  </head>
+  <body bgcolor="black">
+<!-- TradingView Widget BEGIN -->
+<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+<script type="text/javascript">
+new TradingView.widget({
+  "symbol": "BITFINEX:BTCUSD",
+  "interval": "5",
+  "timezone": "Etc/UTC",
+  "theme": "Light",
+  "style": "1",
+  "withdateranges": true,
+  "allow_symbol_change": true,
+  "hideideas": true,
+  "studies": [
+    "MACD@tv-basicstudies"
+  ],
+  "overrides": {
+		"mainSeriesProperties.priceAxisProperties.percentage":true,
+    "paneProperties.topMargin": 18,
+	},
+  "studies_overrides": {
+  },
+  "favorites": {
+		"intervals": ["1D", "5m", "15m", "12h", "M"],
+	},
+  "disabled_features": [],
+  "enabled_features": ["header_undo_redo"],
+});
+</script>
+<!-- TradingView Widget END -->
