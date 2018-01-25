@@ -1,69 +1,86 @@
 <html>
-  <head>
-    <style>
-      iframe {
-        display: block;
-        padding: 1px;
-      }
-      body{
-          margin: 0;
-          padding: 0;
-          display: flex;
-      }
-      body > * {
-        flex:1;
-        width: auto!important;
-      }
-    </style>
-  </head>
-  <body bgcolor="black">
-<!-- TradingView Widget BEGIN -->
-<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-<script type="text/javascript">
-new TradingView.widget({
-  "symbol": "BITFINEX:BTCUSD",
-  "autosize": true,
-  "interval": "15",
-  "timezone": "Etc/UTC",
-  "theme": "Light",
-  "style": "2",
-  "withdateranges": true,
-  "allow_symbol_change": true,
-  "save_image": false,
-  "hideideas": true,
-  "studies":["MACD@tv-basicstudies"],
-  "overrides": {
-		"mainSeriesProperties.priceAxisProperties.percentage":false,
-    "mainSeriesProperties.lineStyle.linewidth": 2,
-    "mainSeriesProperties.lineStyle.color": "#000000"
-	},
-  "studies_overrides": {
-  },
-});
-    new TradingView.widget({
-      "symbol": "BITFINEX:XRPUSD",
-      "autosize": true,
-      "interval": "15",
-      "save_image": false,
-      "timezone": "Etc/UTC",
-      "theme": "Light",
-      "style": "2",
-      "withdateranges": true,
-      "allow_symbol_change": true,
-      "hideideas": true,
-      "studies":["MACD@tv-basicstudies"],
-      "overrides": {
-        "mainSeriesProperties.priceAxisProperties.percentage":false,
-        "mainSeriesProperties.lineStyle.linewidth": 2,
-        "mainSeriesProperties.lineStyle.color": "#000000"
-        },
-      "studies_overrides": {
-      },
-    });
-    </script>
-    <iframe src="https://s.tradingview.com/widgetembed/?symbol=BITFINEX:BTCUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en" frameBorder="0"></iframe>
-    <iframe src="https://s.tradingview.com/widgetembed/?symbol=BITFINEX:XRPUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en" frameBorder="0"></iframe>
-    <iframe src="https://s.tradingview.com/widgetembed/?symbol=BITFINEX:EOSUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en" frameBorder="0"></iframe>
-    <iframe src="https://s.tradingview.com/widgetembed/?symbol=BITTREX:XLMUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en" frameBorder="0"></iframe>
 
-<!-- TradingView Widget END -->
+<head>
+	<style>
+		iframe {
+			display: block;
+			padding: 1px;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+
+		body>* {
+			flex: 1;
+			width: auto !important;
+		}
+	</style>
+</head>
+
+<body bgcolor="black">
+	<!-- TradingView Widget BEGIN -->
+	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	<script type="text/javascript">
+		var defaultConfig = {
+			"symbol": "BITFINEX:BTCUSD",
+			"autosize": true,
+			"interval": "15",
+			"save_image": false,
+			"timezone": "Etc/UTC",
+			"theme": "Light",
+			"style": "1",
+			"pricescale": 200,
+			"withdateranges": true,
+			"allow_symbol_change": true,
+			"hideideas": true,
+			"studies": [
+				"MACD@tv-basicstudies"
+			],
+			"overrides": {
+				"paneProperties.legendProperties.showSeriesOHLC": false,
+				"scalesProperties.showRightScale": false,
+				"mainSeriesProperties.candleStyle.drawBorder": false,
+				"mainSeriesProperties.candleStyle.upColor": "#008800",
+				"mainSeriesProperties.candleStyle.downColor": "#AA0000",
+				"mainSeriesProperties.candleStyle.wickUpColor": "#008800",
+				"mainSeriesProperties.candleStyle.wickDownColor": "#AA0000"
+			},
+			"studies_overrides": {
+				"compare.plot.color": "#000000",
+				"volume.volume.color.0": "#00FFFF",
+				"volume.volume.color.1": "#0000FF",
+			},
+			"favorites": {
+				"intervals": ["1D", "5m", "15m", "12h", "M"],
+			},
+			"disabled_features": [],
+			"enabled_features": [],
+		};
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BITFINEX:XRPUSD";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BITFINEX:BTCUSD";
+		defaultConfig.interval = 1;
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BITFINEX:XRPUSD";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BITFINEX:EOSUSD";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BITTREX:XLMUSD";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BITFINEX:NEOUSD";
+		new TradingView.widget(defaultConfig);
+	</script>
+	<!-- <iframe src="https://s.tradingview.com/widgetembed/?symbol=BITFINEX:BTCUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en"
+	  frameBorder="0"></iframe>
+	<iframe src="https://s.tradingview.com/widgetembed/?symbol=BITFINEX:XRPUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en"
+	  frameBorder="0"></iframe>
+	<iframe src="https://s.tradingview.com/widgetembed/?symbol=BITFINEX:EOSUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en"
+	  frameBorder="0"></iframe>
+	<iframe src="https://s.tradingview.com/widgetembed/?symbol=BITTREX:XLMUSD&interval=1&symboledit=1&saveimage=0&toolbarbg=f1f3f6&studies=MACD%40tv-basicstudies&hideideas=1&theme=Light&style=1&timezone=ETC&withdateranges=1&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en"
+	  frameBorder="0"></iframe> -->
+
+	<!-- TradingView Widget END -->
