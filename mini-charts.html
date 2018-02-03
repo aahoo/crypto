@@ -22,7 +22,7 @@
 		var upColor = "#007700";
 		var downColor = "#AA0000";
 		var defaultConfig = {
-			"symbol": "BITFINEX:BTCUSD",
+			"symbol": "FX:EURUSD",
 			"autosize": true,
 			"interval": "30m",
 			"save_image": false,
@@ -57,12 +57,12 @@
 			"enabled_features": [],
 		};
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "FX:EURUSD";
+		defaultConfig.symbol = "FX:ETHUSD";
 		defaultConfig.interval = 3;
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "BITFINEX:ETHUSD";
-		new TradingView.widget(defaultConfig);
 		defaultConfig.symbol = "BITFINEX:XRPUSD";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BITFINEX:BCHUSD";
 		new TradingView.widget(defaultConfig);
 		defaultConfig.symbol = "Poloniex:STRUSD";
 		new TradingView.widget(defaultConfig);
