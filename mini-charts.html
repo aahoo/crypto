@@ -57,6 +57,7 @@
 		};
 		new TradingView.widget(defaultConfig);
 		defaultConfig.interval = "5";
+		defaultConfig.overrides["mainSeriesProperties.priceAxisProperties.percentage"] = true;
 		defaultConfig.symbol = "BINANCE:MODBTC";
 		new TradingView.widget(defaultConfig);
 		defaultConfig.symbol = "BINANCE:VIBBTC";
