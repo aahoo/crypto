@@ -9,7 +9,7 @@
           padding: 0;
       }
       body > * {
-	width: 440px!important;
+	width: 411px!important;
         height: 320px!important;
         float: left;
         margin: 0!important;
@@ -24,7 +24,7 @@
 		var defaultConfig = {
 			"symbol": "FX:EURUSD",
 			"autosize": true,
-			"interval": "30",
+			"interval": "D",
 			"save_image": false,
 			"timezone": "Etc/UTC",
 			"theme": "Light",
@@ -37,6 +37,7 @@
 			"overrides": {
 				"paneProperties.legendProperties.showSeriesOHLC": false,
 				"scalesProperties.showLeftScale": false,
+				"mainSeriesProperties.priceAxisProperties.percentage":true,
 				"mainSeriesProperties.candleStyle.drawBorder": false,
 				"mainSeriesProperties.candleStyle.upColor": upColor,
 				"mainSeriesProperties.candleStyle.downColor": downColor,
@@ -55,23 +56,34 @@
 			"enabled_features": [],
 		};
 		new TradingView.widget(defaultConfig);
-		defaultConfig.interval = "3";
-		defaultConfig.symbol = "BITFINEX:ETHUSD";
+		defaultConfig.interval = "5";
+		defaultConfig.symbol = "BINANCE:MODBTC";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "BITFINEX:XRPUSD";
+		defaultConfig.symbol = "BINANCE:VIBBTC";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "BITFINEX:BCHUSD";
+		defaultConfig.symbol = "BINANCE:STORMBTC";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "Poloniex:STRUSD";
+		defaultConfig.symbol = "BINANCE:NANOBTC";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "BITFINEX:NEOUSD";
+		defaultConfig.symbol = "BINANCE:RCNBTC";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "BITFINEX:EOSUSD";
+		defaultConfig.symbol = "BINANCE:DNTBTC";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "Poloniex:XEMUSD";
+		defaultConfig.symbol = "BINANCE:MTLBTC";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "BITFINEX:LTCUSD";
+		defaultConfig.symbol = "BINANCE:IOSTBTC";
 		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BINANCE:NCASHBTC";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BINANCE:ADABTC";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BINANCE:TRXBTC";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BINANCE:BTC";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "BINANCE:TNTBTC";
+		new TradingView.widget(defaultConfig);
+
 		
 	</script>
   <!--
