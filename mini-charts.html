@@ -24,7 +24,7 @@
 		var defaultConfig = {
 			"symbol": "FX_IDC:USDEUR",
 			"autosize": true,
-			"interval": "D",
+			"interval": "240",
 			"save_image": false,
 			"timezone": "Etc/UTC",
 			"theme": "Light",
@@ -62,12 +62,13 @@
 		defaultConfig.symbol = "FX_IDC:USDCHF";
 		new TradingView.widget(defaultConfig);
 		defaultConfig.interval = "240";
+		defaultConfig.symbol = "FX_IDC:XAUUSD";
+		new TradingView.widget(defaultConfig);
+		defaultConfig.symbol = "TVC:USOIL";
+		new TradingView.widget(defaultConfig);
 		defaultConfig.symbol = "KRAKEN:ETHUSD";
 		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "KRAKEN:XLMUSD";
-		new TradingView.widget(defaultConfig);
-		defaultConfig.symbol = "KRAKEN:EOSUSD";
-		new TradingView.widget(defaultConfig);/*
+		/*
 		defaultConfig.symbol = "BINANCE:IOSTBTC";
 		new TradingView.widget(defaultConfig);
 		defaultConfig.symbol = "BINANCE:NCASHBTC";
